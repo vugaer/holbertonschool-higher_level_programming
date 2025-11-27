@@ -5,13 +5,17 @@ def islower(word):
         return False
     elif 97 <= ord(word) <= 122:
         return True
+    else:
+         return False
     
 def make_upper(word):
-    return chr(ord(word)-32)
+    if islower(word):
+        return chr(ord(word)-32)
+    else:
+        return word
     
 def uppercase(anything):
     for i in anything:
-        if islower(i):
-            print(make_upper(i), end='')
-        else:
-            print("{}".format(i), end='')
+            print("{}".format(make_upper(i)), end='')
+
+uppercase('holberton ')
