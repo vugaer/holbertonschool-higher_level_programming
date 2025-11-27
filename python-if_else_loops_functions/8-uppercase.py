@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 
-def islower(word):
-    if 65 <= ord(word) <= 90:
+
+def islower(ch):
+    if 65 <= ord(ch) <= 90:
         return False
-    elif 97 <= ord(word) <= 122:
+    elif 97 <= ord(ch) <= 122:
         return True
     else:
-         return False
-    
-def make_upper(word):
-    if islower(word):
-        return chr(ord(word)-32)
-    else:
-        return word
-    
-def uppercase(anything):
-    for i in anything:
-            print("{}".format(make_upper(i)), end='')
+        return False
 
+
+def make_upper(ch):
+    if islower(ch):
+        return chr(ord(ch) - 32)
+    else:
+        return ch
+
+
+def uppercase(text):
+    for ch in text:
+        print("{}".format(make_upper(ch)), end='')
