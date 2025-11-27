@@ -6,6 +6,6 @@
 
 def islower(word):
     if 65 <= ord(word) <= 90:
-        return True
-    elif 97 <= ord(word) <= 122:
         return False
+    elif 97 <= ord(word) <= 122:
+        return True
