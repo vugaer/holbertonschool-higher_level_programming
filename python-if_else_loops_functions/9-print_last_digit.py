@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 yurr = ''
 
 def print_last_digit(number):
