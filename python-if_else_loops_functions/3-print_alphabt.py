@@ -3,4 +3,4 @@ for alphabet in range(ord('a'), ord('z')+1):
     if chr(alphabet) == "q" or chr(alphabet) == "e":
         pass
     else:
-        print(chr(alphabet), end='')
+        print('{}'.format(chr(alphabet)), end='')
