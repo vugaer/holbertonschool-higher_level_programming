@@ -5,5 +5,4 @@ for i in range(0, 10):
             if i == 8 and j == 9:
                 print(89)
             else:
-                print('{0}{1}'.format(str(i),str(j)), end=', ')
-            
+                print('{0}{1}'.format(i, j), end=', ')
