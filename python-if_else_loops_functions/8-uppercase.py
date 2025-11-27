@@ -18,4 +18,3 @@ def uppercase(anything):
     for i in anything:
             print("{}".format(make_upper(i)), end='')
 
-uppercase('holberton ')
