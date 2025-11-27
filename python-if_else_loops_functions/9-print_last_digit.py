@@ -8,6 +8,6 @@ def print_last_digit(number):
     else:
         last = -number % 10
     
-    last+=yurr
+    str(last)+=yurr
 
 print(yurr)
