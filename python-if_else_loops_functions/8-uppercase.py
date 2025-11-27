@@ -14,7 +14,4 @@ def uppercase(anything):
         if islower(i):
             print(make_upper(i), end='')
         else:
-            print(i, end='')
-
-
-uppercase('best school IN the world')
+            print("{}".format(i), end='')
