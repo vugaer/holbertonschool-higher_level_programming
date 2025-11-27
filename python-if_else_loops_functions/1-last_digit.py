@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 import random
-sign = ' '
+
 number = random.randint(-10000, 10000)
 
-last = int(str(number)[-1])
+if number > 0:
+    last = number % 10
+else:
+    last = -(-number % 10)
 
 if last == 0:
     condition = "0"
-elif last < 5 or number < 0:
+elif last < 5:
     condition = "less than 6 and not 0"
-    if number < 0:
-        sign = " -"
-elif last > 5 and number > 0:
+elif last > 5:
     condition = "greater than 5"
 
 
-print(f"Last digit of {number} is{sign}{last} and is {condition}")
+print(f"Last digit of {number} is {last} and is {condition}")
