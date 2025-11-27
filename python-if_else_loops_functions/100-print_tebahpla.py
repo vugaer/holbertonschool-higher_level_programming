@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-flag = True
 for i in range(ord('z'), ord('a') - 1, -1):
-    word = chr(i)
-    if flag:
-        print(word, end='')
-        flag = False
+    if i % 2 == 0:
+        print("{}{}".format(chr(i), chr(i-1).upper()), end='')
     else:
-        print(word.upper(), end='')
-        flag = True
+        pass
