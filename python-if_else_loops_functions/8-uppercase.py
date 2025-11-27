@@ -7,3 +7,5 @@ def uppercase(str):
             code = code - 32         # convert to 'A'..'Z'
         print("{:c}".format(code), end='')
     print()
+
+uppercase('nigga ')
