@@ -5,10 +5,10 @@ number = random.randint(-10000, 10000)
 
 last = int(str(number)[-1])
 
-if last > 5:
-    condition = "greater than 5"
-elif last < 5:
+if last < 5 or number < 0:
     condition = "less than 6 and not 0"
+elif last > 5 and number > 0:
+    condition = "greater than 5"
 elif last == 0:
     condition = "0"
 
