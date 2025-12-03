@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import add_0 as wtf
+    import add_0 as meagre
     a = 1
     b = 2
-    print("{} + {} = {}".format(a, b, wtf(a, b)))
+    print("{} + {} = {}".format(a, b, meagre.add(a, b)))
