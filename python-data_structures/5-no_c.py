@@ -6,5 +6,3 @@ def no_c(my_string):
             if (i != 'C'):
                 newstr += i
     return newstr
-
-print(no_c('SCool'))
