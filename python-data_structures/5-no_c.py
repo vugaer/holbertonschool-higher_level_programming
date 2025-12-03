@@ -2,6 +2,9 @@
 def no_c(my_string):
     newstr = ''
     for i in my_string:
-        if i != 'c' or i != 'C':
-            newstr += i
+        if (i != 'c'):
+            if (i != 'C'):
+                newstr += i
     return newstr
+
+print(no_c('SCool'))
