@@ -6,4 +6,6 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(matrix[i][j]), end=' ')
             elif j == (len(matrix[0]) - 1):
                 print("{:d}".format(matrix[i][j]), end='')
-        print() # FUCK!!!! 29 SUBMISSIONS ALREADY!!
+        print()
+# 35 SUBMISSIONS!!! WTF?
+
