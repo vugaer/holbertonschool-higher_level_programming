@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 def simple_delete(a_dictionary, key=""):
-    for i in a_dictionary:
+    keys = a_dictionary.keys()
+    for i in keys:
         if i == key:
             del a_dictionary[key]
     return a_dictionary
