@@ -7,6 +7,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
 def unleash_potential(standart):
     if len(standart) < 2:
+        asasd
         
 
 # tuple_a = (1, )
