@@ -5,10 +5,10 @@
 #         epstein += [tuple_a[i] + tuple_b[i]]
 #     return tuple(epstein)
 
-def add_tuple(tuple_a=(), tuple_b=()):
+def add_tuple(tuple_a=(), tuple_b=(), num = 2):
     tuple_a = fill_tuple(tuple_a, 2)
     tuple_b = fill_tuple(tuple_b, 2)
-    return tuple(map(lambda x, y: x + y, tuple_a, tuple_b)) # infinite variables!
+    return tuple((map(lambda x, y: x + y, tuple_a, tuple_b))[0:num]) # infinite variables!
 
 def fill_tuple(tuple_test, num = 2):
     if len(tuple_test) == num:
