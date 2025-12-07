@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-# def add_tuple(tuple_a=(), tuple_b=()):
-#     epstein = []
-#     for i in range(2):
-#         epstein += [tuple_a[i] + tuple_b[i]]
-#     return tuple(epstein)
 
 def add_tuple(tuple_a=(), tuple_b=(), num = 2):
     tuple_a = fill_tuple(tuple_a, 2)
     tuple_b = fill_tuple(tuple_b, 2)
-    return tuple(list(map(lambda x, y: x + y, tuple_a, tuple_b))[0:num]) # infinite variables!
+    return tuple(list(map(lambda x, y: x + y, tuple_a, tuple_b))[0 : num])
 
 def fill_tuple(tuple_test, num = 2):
     if len(tuple_test) < num:
@@ -18,4 +13,4 @@ def fill_tuple(tuple_test, num = 2):
                 ppa[i] = tuple_test[i]
         return tuple(ppa)
     else:
-        return tuple_test[0:num]
+        return tuple_test[0 : num]
