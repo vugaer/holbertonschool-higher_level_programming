@@ -1,18 +1,21 @@
 #!/usr/bin/python3
+# def add_tuple(tuple_a=(), tuple_b=()):
+#     epstein = []
+#     for i in range(2):
+#         epstein += [tuple_a[i] + tuple_b[i]]
+#     return tuple(epstein)
+
 def add_tuple(tuple_a=(), tuple_b=()):
-    epstein = []
-    for i in range(2):
-        epstein += [tuple_a[i] + tuple_b[i]]
-    return tuple(epstein)
+    tuple_a = fill_tuple(tuple_a, 2)
+    tuple_b = fill_tuple(tuple_b, 2)
+    return tuple(map(lambda x, y: x + y, tuple_a, tuple_b)) # infinite variables!
 
-def unleash_potential(standart):
-    if len(standart) < 2:
-        asasd
-        
-
-# tuple_a = (1, )
-# tuple_b = (88, 11)
-# new_tuple = add_tuple(tuple_a, tuple_b)
-# print(new_tuple)
-# print(add_tuple(tuple_a, (1, )))
-# print(add_tuple(tuple_a, ()))
+def fill_tuple(tuple_test, num = 2):
+    if len(tuple_test) == num:
+        return tuple_test
+    elif len(tuple_test) < num:
+        ppa = [0 for i in range(num)]
+        for i in range(len(tuple_test)):
+            if tuple_test[i] == True:
+                ppa[i] = tuple_test[i]
+    return tuple(ppa)
