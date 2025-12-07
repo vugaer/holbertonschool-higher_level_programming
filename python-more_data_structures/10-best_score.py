@@ -3,7 +3,7 @@
 def best_score(a_dictionary):
     holder_best = None
     if a_dictionary == {}:
-        pass
+        return None
     else:
         for i in a_dictionary:
             if a_dictionary[i] == max(a_dictionary.values()):
