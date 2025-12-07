@@ -2,7 +2,7 @@
 
 def best_score(a_dictionary):
     holder_best = None
-    if a_dictionary == {} or a_dictionary == None:
+    if a_dictionary == {} or a_dictionary is None:
         return None
     else:
         for i in a_dictionary:
