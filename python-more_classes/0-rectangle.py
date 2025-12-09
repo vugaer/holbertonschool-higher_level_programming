@@ -4,7 +4,7 @@
 
 
 class Rectangle:
-    
+
     "ts is so tuff"
 
     def __init__(self):
