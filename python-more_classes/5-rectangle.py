@@ -12,6 +12,7 @@ class Rectangle:
         self.cf(height, "height")
         self.__width = width
         self.__height = height
+        self.__instances = 0
 
     def cf(self, smth, wtf):
         if type(smth) is not int:
@@ -63,3 +64,7 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        self.__instances -= 1
+
+    def number_of_instances(self):
+        self.__instances += 1
