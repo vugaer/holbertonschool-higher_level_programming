@@ -81,5 +81,8 @@ class Rectangle:
         elif Rectangle.area(rect_1) < Rectangle.area(rect_2):
             return rect_2
 
+    @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        cls.width = size
+        cls.height = size
+        return Rectangle()
