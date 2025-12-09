@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module that defines MyList class"""
+"""to run doctest
+
+python3 -m doctest -v tests/1-my_list.txt"""
 
 
 class MyList(list):
