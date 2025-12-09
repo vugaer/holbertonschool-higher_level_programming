@@ -8,27 +8,31 @@ class Rectangle:
     "ts is so tuff"
 
     def __init__(self, width=0, height=0):
+        self.cf(width, "width")
+        self.cf(height, "height")
         self.__width = width
         self.__height = height
+
+    def cf(self, smth, wtf):
+        if type(smth) is not int:
+            raise TypeError('{} must be an integer'.format(wtf))
+        if smth < 0:
+            raise ValueError('{} must be >= 0'.format(wtf))
+        else:
+            return self.smth
 
     def getWidth(self):
         return self.__width
 
     def setWidth(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
-        if value < 0:
-            raise ValueError('width must be >= 0')
+        self.cf(value, "width")
         self.__width = value
 
     def getHeight(self):
         return self.__height
 
     def setHeight(self, value):
-        if type(value) is not int:
-            raise TypeError('height must be an integer')
-        if value < 0:
-            raise ValueError('height must be >= 0')
+        self.cf(value, "height")
         self.__height = value
 
     width = property(getWidth, setWidth)
