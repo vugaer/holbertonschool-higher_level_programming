@@ -51,8 +51,12 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ''
         else:
+            result = ''
             for i in range(self.__height):
-                print('#' * self.__width)
+                result += '#' * self.__width
+                if i < self.__height - 1:  # Add newline except for last row
+                    result += '\n'
+            return result
 
     def __repr__(self):
-        print(f'Rectangle({self.__width}, {self.__height})')
+        return f'Rectangle({self.__width}, {self.__height})'
