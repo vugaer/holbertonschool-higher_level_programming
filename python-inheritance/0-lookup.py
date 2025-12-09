@@ -8,5 +8,5 @@ def lookup(obj):
     """
     Docstring for lookup
     """
-    
+
     return dir(obj)
