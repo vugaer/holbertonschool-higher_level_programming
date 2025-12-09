@@ -19,7 +19,7 @@ class Rectangle:
         if smth < 0:
             raise ValueError('{} must be >= 0'.format(wtf))
         else:
-            return self.smth
+            return smth
 
     def getWidth(self):
         return self.__width
