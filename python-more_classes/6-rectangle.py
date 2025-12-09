@@ -7,13 +7,12 @@ class Rectangle:
 
     "ts is so tuff"
 
-    def __init__(self, width=0, height=0, number_of_instances=0):
+    def __init__(self, width=0, height=0, instances=0):
         self.cf(width, "width")
         self.cf(height, "height")
         self.__width = width
         self.__height = height
-        self.number_of_instances = number_of_instances
-        self.number_of_instances += 1
+        self.instances = instances
 
     def cf(self, smth, wtf):
         if type(smth) is not int:
@@ -65,4 +64,8 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        self.number_of_instances -= 1
+        self.instances -= 1
+
+    def number_of_instances(self):
+        self.instances = 0
+        return self.instances
