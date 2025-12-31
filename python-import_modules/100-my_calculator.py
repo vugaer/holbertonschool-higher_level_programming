@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-import calculator_1
-import sys
+from calculator_1 import add, sub, mul, div
+from sys import argv
 
 if __name__ == "__main__":
 
-    args = sys.argv
+    args = argv
 
     if len(args) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -19,10 +19,10 @@ if __name__ == "__main__":
             exit(1)
         else:
             if operator == "+":
-                print(f"{a} + {b} = {calculator_1.add(a, b)}")
+                print(f"{a} + {b} = {add(a, b)}")
             elif operator == "-":
-                print(f"{a} - {b} = {calculator_1.sub(a, b)}")
+                print(f"{a} - {b} = {sub(a, b)}")
             elif operator == "*":
-                print(f"{a} * {b} = {calculator_1.mul(a, b)}")
+                print(f"{a} * {b} = {mul(a, b)}")
             elif operator == "/":
-                print(f"{a} / {b} = {calculator_1.div(a, b)}")
+                print(f"{a} / {b} = {div(a, b)}")
