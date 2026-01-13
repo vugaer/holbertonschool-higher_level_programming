@@ -35,9 +35,9 @@ class CustomObject:
         Returns:
             CustomObject instance on success, or None on error"""
 
-            with open(filename, "rb") as f:
-                obj = pickle.load(f)  # load object from binary file [web:55]
-            # Ensure the loaded object is actually a CustomObject
-            if isinstance(obj, cls):
-                return obj
-            return None
+        with open(filename, "rb") as f:
+            obj = pickle.load(f)  # load object from binary file [web:55]
+        # Ensure the loaded object is actually a CustomObject
+        if isinstance(obj, cls):
+            return obj
+        return None
