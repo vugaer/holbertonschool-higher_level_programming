@@ -23,9 +23,12 @@ class CustomObject:
         Returns:
             The filename on success, or None on error.
         """
-        with open(filename, "wb") as f:
-            pickle.dump(self, f)  # write object in binary mode [web:55]
-        return filename
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)  # write object in binary mode [web:55]
+            return filename
+        except (OSError, pickle.PicklingError, Exception):
+            return None
 
     @classmethod
     def deserialize(cls, filename):
@@ -33,11 +36,15 @@ class CustomObject:
         Deserialize an instance of CustomObject from a file.
 
         Returns:
-            CustomObject instance on success, or None on error"""
+            CustomObject instance on success, or None on error.
+        """
+        try:
+            with open(filename, "rb") as f:
+                obj = pickle.load(f)  # load object from binary file [web:55]
+            # Ensure the loaded object is actually a CustomObject
+            if isinstance(obj, cls):
+                return obj
+            return None
+        except (FileNotFoundError, OSError, pickle.UnpicklingError, EOFError, Exception):
+            return None
 
-        with open(filename, "rb") as f:
-            obj = pickle.load(f)  # load object from binary file [web:55]
-        # Ensure the loaded object is actually a CustomObject
-        if isinstance(obj, cls):
-            return obj
-        return None
