@@ -1,9 +1,8 @@
 -- random comments to be made so far
 
 SELECT name FROM tv_genres
-WHERE tv_genres.id in (
-  SELECT genre_id FROM tv_show_genres
-  WHERE show_id = (
-    SELECT id FROM tv_shows
-    WHERE tv_shows.title = 'Dexter')
-);
+JOIN tv_show_genres ON
+tv_show_genres.genre_id = tv_genres.id
+JOIN tv_shows ON
+tv_show_genres.show_id = tv_shows.id
+WHERE tv_shows.name = 'Dexter';
